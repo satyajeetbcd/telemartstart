@@ -614,8 +614,8 @@
                         </template>
                     </div>
 
-                    <!-- State, OPD, Doctor Selection -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- State, OPD Selection -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-medium text-gray-600 mb-1">State/UT</label>
                             <select x-model="selectedState"
@@ -634,16 +634,6 @@
                                 <template x-for="item in opdOptions" :key="item">
                                     <option :value="item" x-text="item"></option>
                                 </template>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-gray-600 mb-1">Doctors</label>
-                            <select x-model="doctorId"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
-                                <option value="">Select Doctor...</option>
-                                @foreach($doctors as $doctor)
-                                    <option value="{{ $doctor['id'] }}">Dr. {{ $doctor['name'] ?? ($doctor['first_name'] ?? '') . ' ' . ($doctor['last_name'] ?? '') }}</option>
-                                @endforeach
                             </select>
                         </div>
                     </div>
