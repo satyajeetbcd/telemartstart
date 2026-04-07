@@ -510,89 +510,54 @@
     </div>
 </section>
 
-<!-- Why Choose Us Section -->
-<section class="py-16 lg:py-24 bg-white" id="about">
+<!-- Doctors Visiting Section -->
+<section class="py-16 lg:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Left Illustration -->
-            <div class="flex justify-center">
-                <div class="relative">
-                    <div class="w-80 h-80 lg:w-96 lg:h-96 bg-brand-50 rounded-2xl flex items-center justify-center">
-                        <svg class="w-48 h-48 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        <div class="text-center mb-12 lg:mb-16">
+            <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Our Doctors</span>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Doctors Visiting</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Meet our verified and experienced doctors available for online consultations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach($doctors as $doctor)
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6">
+                <div class="flex items-center mb-4">
+                    <div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center mr-4">
+                        <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                         </svg>
                     </div>
-                    <div class="absolute -bottom-4 -right-4 bg-brand-600 text-white rounded-xl p-4 shadow-lg">
-                        <p class="text-2xl font-bold">24/7</p>
-                        <p class="text-sm text-brand-100">Available</p>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">{{ $doctor['name'] }}</h3>
+                        <p class="text-brand-600 text-sm font-medium">{{ $doctor['specialization'] }}</p>
+                    </div>
+                </div>
+                <div class="space-y-2 text-sm text-gray-600">
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span>{{ $doctor['opd_days'] }}</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>{{ $doctor['timing_from'] }} - {{ $doctor['timing_to'] }}</span>
                     </div>
                 </div>
             </div>
+            @endforeach
+        </div>
 
-            <!-- Right Content -->
-            <div>
-                <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Why Tele Health Mart</span>
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
-                <p class="text-gray-600 mb-8">We are committed to providing the highest quality telemedicine services with a focus on patient convenience and care.</p>
-
-                <div class="space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Verified & Licensed Doctors</h4>
-                            <p class="text-gray-600 text-sm">All doctors on our platform are verified with valid medical licenses and KYC documentation.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Secure & Private</h4>
-                            <p class="text-gray-600 text-sm">Your health data is encrypted and stored securely. We follow strict privacy guidelines.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Affordable Consultation</h4>
-                            <p class="text-gray-600 text-sm">Quality healthcare at affordable prices. No hidden charges or surprise fees.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Digital Prescriptions</h4>
-                            <p class="text-gray-600 text-sm">Get instant e-prescriptions that can be shared with any pharmacy digitally.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Multi-Language Support</h4>
-                            <p class="text-gray-600 text-sm">Access healthcare services in Hindi, English, and other regional languages.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center mt-10">
+            <a href="{{ route('opd-timings') }}" class="inline-flex items-center px-6 py-3 border-2 border-brand-600 text-brand-600 rounded-lg font-semibold hover:bg-brand-50 transition">
+                View All Doctors & OPD Timings
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
         </div>
     </div>
 </section>

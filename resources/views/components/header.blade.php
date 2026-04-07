@@ -33,19 +33,19 @@
 <!-- Main Navigation -->
 <nav class="bg-white shadow-md sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center justify-between h-20 lg:h-24">
             <!-- Logo -->
             <a href="{{ route('home') }}" class="flex items-center flex-shrink-0">
-                <img src="{{ asset('images/logo.png') }}" alt="Tele Health Mart" class="h-12 lg:h-14 w-auto object-contain">
+                <img src="{{ asset('images/logo.png') }}" alt="Tele Health Mart" class="h-16 lg:h-20 w-auto object-contain">
             </a>
 
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="{{ route('home') }}" class="text-gray-700 hover:text-brand-600 font-medium transition {{ request()->routeIs('home') ? 'text-brand-600 border-b-2 border-brand-600 pb-1' : '' }}">Home</a>
-                <a href="#services" class="text-gray-700 hover:text-brand-600 font-medium transition">Services</a>
-                <a href="#how-it-works" class="text-gray-700 hover:text-brand-600 font-medium transition">How It Works</a>
-                <a href="#about" class="text-gray-700 hover:text-brand-600 font-medium transition">About</a>
-                <a href="#contact" class="text-gray-700 hover:text-brand-600 font-medium transition">Contact</a>
+                <a href="{{ route('services') }}" class="text-gray-700 hover:text-brand-600 font-medium transition {{ request()->routeIs('services') ? 'text-brand-600 border-b-2 border-brand-600 pb-1' : '' }}">Services</a>
+                <a href="{{ route('how-it-works') }}" class="text-gray-700 hover:text-brand-600 font-medium transition {{ request()->routeIs('how-it-works') ? 'text-brand-600 border-b-2 border-brand-600 pb-1' : '' }}">How It Works</a>
+                <a href="{{ route('about') }}" class="text-gray-700 hover:text-brand-600 font-medium transition {{ request()->routeIs('about') ? 'text-brand-600 border-b-2 border-brand-600 pb-1' : '' }}">About</a>
+                <a href="{{ route('contact') }}" class="text-gray-700 hover:text-brand-600 font-medium transition {{ request()->routeIs('contact') ? 'text-brand-600 border-b-2 border-brand-600 pb-1' : '' }}">Contact</a>
                 <a href="{{ route('opd-timings') }}" class="text-gray-700 hover:text-brand-600 font-medium transition {{ request()->routeIs('opd-timings') ? 'text-brand-600 border-b-2 border-brand-600 pb-1' : '' }}">OPD Timings</a>
             </div>
 
@@ -58,6 +58,9 @@
                 @else
                     <a href="{{ route('login') }}" class="px-5 py-2 border-2 border-brand-600 text-brand-600 rounded-lg font-medium hover:bg-brand-50 transition">
                         Patient Login
+                    </a>
+                    <a href="{{ config('services.telemartmain.admin_login_url') }}" target="_blank" class="px-5 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition">
+                        Doctor Login
                     </a>
                     <a href="{{ route('register') }}" class="px-5 py-2 bg-brand-600 text-white rounded-lg font-medium hover:bg-brand-700 transition">
                         Register
@@ -84,10 +87,10 @@
              class="lg:hidden border-t border-gray-100 py-4" style="display: none;">
             <div class="space-y-2">
                 <a href="{{ route('home') }}" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition">Home</a>
-                <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition">Services</a>
-                <a href="#how-it-works" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition">How It Works</a>
-                <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition">About</a>
-                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition">Contact</a>
+                <a href="{{ route('services') }}" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition {{ request()->routeIs('services') ? 'bg-brand-50 text-brand-600' : '' }}">Services</a>
+                <a href="{{ route('how-it-works') }}" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition {{ request()->routeIs('how-it-works') ? 'bg-brand-50 text-brand-600' : '' }}">How It Works</a>
+                <a href="{{ route('about') }}" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition {{ request()->routeIs('about') ? 'bg-brand-50 text-brand-600' : '' }}">About</a>
+                <a href="{{ route('contact') }}" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition {{ request()->routeIs('contact') ? 'bg-brand-50 text-brand-600' : '' }}">Contact</a>
                 <a href="{{ route('opd-timings') }}" class="block px-4 py-2 text-gray-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition {{ request()->routeIs('opd-timings') ? 'bg-brand-50 text-brand-600' : '' }}">OPD Timings</a>
             </div>
             <div class="mt-4 px-4 space-y-2">
@@ -95,6 +98,7 @@
                     <a href="{{ route('patient.dashboard') }}" class="block w-full text-center px-5 py-2 bg-brand-600 text-white rounded-lg font-medium hover:bg-brand-700 transition">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="block w-full text-center px-5 py-2 border-2 border-brand-600 text-brand-600 rounded-lg font-medium hover:bg-brand-50 transition">Patient Login</a>
+                    <a href="{{ config('services.telemartmain.admin_login_url') }}" target="_blank" class="block w-full text-center px-5 py-2 border-2 border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition">Doctor Login</a>
                     <a href="{{ route('register') }}" class="block w-full text-center px-5 py-2 bg-brand-600 text-white rounded-lg font-medium hover:bg-brand-700 transition">Register</a>
                 @endif
             </div>

@@ -38,6 +38,7 @@ return [
     'telemartmain' => [
         'api_url' => env('TELEMARTMAIN_API_URL', 'http://localhost:8000/api'),
         'base_url' => env('TELEMARTMAIN_BASE_URL', 'http://localhost:8000'),
+        'admin_login_url' => env('ADMIN_LOGIN_URL', 'http://localhost:8000/login'),
     ],
 
 ];

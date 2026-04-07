@@ -5,10 +5,15 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PatientDashboardController;
 use App\Http\Controllers\OpdTimingController;
+use App\Http\Controllers\PageController;
 
 // Public routes
 Route::get('/', [LandingController::class, 'index'])->name('home');
 Route::get('/opd-timings', [OpdTimingController::class, 'index'])->name('opd-timings');
+Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::get('/how-it-works', [PageController::class, 'howItWorks'])->name('how-it-works');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 // Auth routes
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

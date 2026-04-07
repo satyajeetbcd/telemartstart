@@ -28,9 +28,9 @@
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-2">
                     <li><a href="{{ route('home') }}" class="text-brand-200 hover:text-white transition text-sm">Home</a></li>
-                    <li><a href="#about" class="text-brand-200 hover:text-white transition text-sm">About Us</a></li>
-                    <li><a href="#services" class="text-brand-200 hover:text-white transition text-sm">Our Services</a></li>
-                    <li><a href="#how-it-works" class="text-brand-200 hover:text-white transition text-sm">How It Works</a></li>
+                    <li><a href="{{ route('about') }}" class="text-brand-200 hover:text-white transition text-sm">About Us</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Our Services</a></li>
+                    <li><a href="{{ route('how-it-works') }}" class="text-brand-200 hover:text-white transition text-sm">How It Works</a></li>
                     <li><a href="{{ route('opd-timings') }}" class="text-brand-200 hover:text-white transition text-sm">OPD Timings</a></li>
                     <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Privacy Policy</a></li>
                     <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Terms of Service</a></li>
@@ -41,12 +41,12 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4">Our Services</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">OPD Consultation</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Specialist Consultation</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">E-Prescriptions</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Health Records</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Appointment Booking</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Video Consultation</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">OPD Consultation</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Specialist Consultation</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">E-Prescriptions</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Health Records</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Appointment Booking</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Video Consultation</a></li>
                 </ul>
             </div>
 
