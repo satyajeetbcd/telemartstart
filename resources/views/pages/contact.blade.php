@@ -33,7 +33,7 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-900 mb-1">Office Address</h4>
-                            <p class="text-gray-600 text-sm">New Delhi, India</p>
+                            <p class="text-gray-600 text-sm">House No. N1/66R-15K, Ganga Bihar Colony,<br>Samne Ghat, Varanasi, Uttar Pradesh, 221005</p>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
-                            <a href="mailto:support@telehealthmart.in" class="text-brand-600 hover:text-brand-700 text-sm">support@telehealthmart.in</a>
+                            <a href="mailto:support@telehealthmart.com" class="text-brand-600 hover:text-brand-700 text-sm">support@telehealthmart.com</a>
                         </div>
                     </div>
 

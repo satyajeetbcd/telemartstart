@@ -14,6 +14,10 @@ Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/how-it-works', [PageController::class, 'howItWorks'])->name('how-it-works');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
+Route::get('/terms', [PageController::class, 'terms'])->name('terms');
+Route::get('/refund-policy', [PageController::class, 'refundPolicy'])->name('refund-policy');
+Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 
 // Auth routes
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

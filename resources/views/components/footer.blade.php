@@ -8,7 +8,7 @@
                     <img src="{{ asset('images/logo.png') }}" alt="Tele Health Mart" class="h-12 w-auto object-contain brightness-0 invert">
                 </a>
                 <p class="text-brand-200 text-sm leading-relaxed mb-4">
-                    Tele Health Mart is a comprehensive telemedicine platform connecting patients with verified doctors for online consultations, prescriptions, and health record management.
+                    Telehealth Mart, an initiative by Nirmala Welfare Foundation, connects experienced doctors across India with patients in Tier-3 cities, suburban, and rural areas through simple online consultations.
                 </p>
                 <div class="flex space-x-3">
                     <a href="#" class="w-8 h-8 bg-brand-700 rounded-full flex items-center justify-center hover:bg-brand-600 transition">
@@ -32,8 +32,10 @@
                     <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Our Services</a></li>
                     <li><a href="{{ route('how-it-works') }}" class="text-brand-200 hover:text-white transition text-sm">How It Works</a></li>
                     <li><a href="{{ route('opd-timings') }}" class="text-brand-200 hover:text-white transition text-sm">OPD Timings</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Privacy Policy</a></li>
-                    <li><a href="#" class="text-brand-200 hover:text-white transition text-sm">Terms of Service</a></li>
+                    <li><a href="{{ route('privacy-policy') }}" class="text-brand-200 hover:text-white transition text-sm">Privacy Policy</a></li>
+                    <li><a href="{{ route('terms') }}" class="text-brand-200 hover:text-white transition text-sm">Terms & Conditions</a></li>
+                    <li><a href="{{ route('refund-policy') }}" class="text-brand-200 hover:text-white transition text-sm">Refund Policy</a></li>
+                    <li><a href="{{ route('faq') }}" class="text-brand-200 hover:text-white transition text-sm">FAQs</a></li>
                 </ul>
             </div>
 
@@ -46,7 +48,7 @@
                     <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">E-Prescriptions</a></li>
                     <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Health Records</a></li>
                     <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Appointment Booking</a></li>
-                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Video Consultation</a></li>
+                    <li><a href="{{ route('services') }}" class="text-brand-200 hover:text-white transition text-sm">Follow-up Care</a></li>
                 </ul>
             </div>
 
@@ -59,7 +61,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
-                        <span class="text-brand-200 text-sm">New Delhi, India</span>
+                        <span class="text-brand-200 text-sm">House No. N1/66R-15K, Ganga Bihar Colony, Samne Ghat, Varanasi, Uttar Pradesh, 221005</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <svg class="w-5 h-5 text-brand-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +73,7 @@
                         <svg class="w-5 h-5 text-brand-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
-                        <span class="text-brand-200 text-sm">support@telehealthmart.in</span>
+                        <span class="text-brand-200 text-sm">support@telehealthmart.com</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <svg class="w-5 h-5 text-brand-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +90,7 @@
     <div class="border-t border-brand-700">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
             <p class="text-brand-300 text-sm">&copy; {{ date('Y') }} Tele Health Mart. All rights reserved.</p>
-            <p class="text-brand-300 text-sm mt-2 md:mt-0">A Telemedicine Initiative for Better Healthcare</p>
+            <p class="text-brand-300 text-sm mt-2 md:mt-0">An Initiative by Nirmala Welfare Foundation</p>
         </div>
     </div>
 </footer>

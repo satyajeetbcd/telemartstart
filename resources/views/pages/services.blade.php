@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Our Services - Tele Health Mart')
+@section('title', 'Our Services - Telehealth Mart')
 
 @section('content')
 
@@ -9,7 +9,7 @@
     <div class="max-w-7xl mx-auto px-4 text-center">
         <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">What We Offer</span>
         <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Services</h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive telemedicine services designed to make healthcare accessible and convenient for everyone.</p>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Supporting better healthcare access through reliable and easy-to-use telemedicine services. Connect with qualified doctors across India through simple and affordable online consultations.</p>
     </div>
 </section>
 
@@ -25,7 +25,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">OPD Consultation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Consult with general physicians through video or audio calls from the comfort of your home.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Consult qualified general physicians through secure video or audio calls. Patients in small towns and rural areas can receive primary medical advice without travelling to bigger cities.</p>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Video & Audio Consultation</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Instant E-Prescription</li>
@@ -41,7 +41,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Specialist Consultation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Connect with cardiologists, dermatologists, pediatricians and more specialists online.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Connect with experienced specialists across India including cardiologists, dermatologists, pediatricians and more. Get expert opinions even when specialists are not available locally.</p>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li class="flex items-center"><svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Cardiology & Dermatology</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Pediatrics & Gynecology</li>
@@ -57,7 +57,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">E-Prescriptions</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Receive digital prescriptions instantly after your consultation, accessible anytime.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Receive digital prescriptions after your consultation. Easy to download, share, and use at nearby pharmacies for convenient treatment.</p>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li class="flex items-center"><svg class="w-4 h-4 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Digital Prescription PDF</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Share with Any Pharmacy</li>
@@ -73,7 +73,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Health Records</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Securely store and access your complete medical history and health records digitally.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Store medical reports, prescriptions, and consultation history in one secure place. Access your records anytime for better continuity of care.</p>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li class="flex items-center"><svg class="w-4 h-4 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Secure Cloud Storage</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Upload Reports & Scans</li>
@@ -89,7 +89,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Appointment Booking</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Easy online scheduling with real-time availability of doctors and convenient time slots.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Book consultations with available doctors through a simple scheduling system. Choose a convenient time slot based on your availability.</p>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li class="flex items-center"><svg class="w-4 h-4 text-teal-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Real-time Slot Availability</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-teal-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Flexible Scheduling</li>
@@ -105,7 +105,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Follow-up Care</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Track your treatment progress and easily book follow-up consultations with your doctor.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Schedule follow-up consultations to monitor progress and adjust treatment when needed. Ensures continuous care without repeated travel.</p>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li class="flex items-center"><svg class="w-4 h-4 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Treatment Progress Tracking</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Easy Re-booking</li>
@@ -119,8 +119,9 @@
 <!-- CTA Section -->
 <section class="bg-gradient-to-r from-brand-600 to-brand-700 py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-        <p class="text-brand-100 text-lg mb-8">Register now and book your first consultation with a verified doctor.</p>
+        <h2 class="text-3xl font-bold text-white mb-4">Start Your Health Journey Today</h2>
+        <p class="text-brand-100 text-lg mb-2">Register with Telehealth Mart and connect with experienced doctors across India through simple online consultations.</p>
+        <p class="text-brand-200 text-base mb-8">आज ही पंजीकरण करें और घर बैठे डॉक्टर से परामर्श प्राप्त करें।</p>
         <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-700 rounded-lg font-bold text-lg hover:bg-brand-50 transition shadow-lg">
             Book Consultation
         </a>

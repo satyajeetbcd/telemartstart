@@ -10,13 +10,13 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Left Content -->
             <div>
-                <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-6">Trusted Telemedicine Platform</span>
+                <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-6">An Initiative by Nirmala Welfare Foundation</span>
                 <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                    Quality Healthcare at
-                    <span class="text-brand-600">Your Fingertips</span>
+                    Connecting India to
+                    <span class="text-brand-600">Better Healthcare</span>
                 </h1>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
-                    Connect with verified doctors from the comfort of your home. Book OPD appointments, get e-prescriptions, and manage your health records online.
+                    Telehealth Mart connects experienced and qualified doctors across India with patients in Tier-3 cities, suburban, and rural areas. Through simple online consultations, patients can receive expert medical advice without travelling long distances.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 mb-8">
                     <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-3 bg-brand-600 text-white rounded-lg font-semibold hover:bg-brand-700 transition shadow-lg shadow-brand-600/30">
@@ -380,7 +380,7 @@
         <div class="text-center mb-12 lg:mb-16">
             <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">What We Offer</span>
             <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive telemedicine services designed to make healthcare accessible and convenient for everyone.</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Supporting better healthcare access through reliable and easy-to-use telemedicine services. Connect with qualified doctors across India through simple and affordable online consultations.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -392,7 +392,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">OPD Consultation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Consult with general physicians through video or audio calls from the comfort of your home.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Consult qualified general physicians through secure video or audio calls. Patients in small towns and rural areas can receive primary medical advice without travelling to bigger cities.</p>
             </div>
 
             <!-- Service 2: Specialist Consultation -->
@@ -403,7 +403,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Specialist Consultation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Connect with cardiologists, dermatologists, pediatricians and more specialists online.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Connect with experienced specialists across India including cardiologists, dermatologists, pediatricians and more. Get expert opinions even when specialists are not available locally.</p>
             </div>
 
             <!-- Service 3: E-Prescriptions -->
@@ -414,7 +414,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">E-Prescriptions</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Receive digital prescriptions instantly after your consultation, accessible anytime.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Receive digital prescriptions after your consultation. Easy to download, share, and use at nearby pharmacies for convenient treatment.</p>
             </div>
 
             <!-- Service 4: Health Records -->
@@ -425,7 +425,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Health Records</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Securely store and access your complete medical history and health records digitally.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Store medical reports, prescriptions, and consultation history in one secure place. Access your records anytime for better continuity of care.</p>
             </div>
 
             <!-- Service 5: Appointment Booking -->
@@ -436,7 +436,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Appointment Booking</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Easy online scheduling with real-time availability of doctors and convenient time slots.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Book consultations with available doctors through a simple scheduling system. Choose a convenient time slot based on your availability.</p>
             </div>
 
             <!-- Service 6: Follow-up Care -->
@@ -447,7 +447,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Follow-up Care</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Track your treatment progress and easily book follow-up consultations with your doctor.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Schedule follow-up consultations to monitor progress and adjust treatment when needed. Ensures continuous care without repeated travel.</p>
             </div>
         </div>
     </div>
@@ -459,7 +459,8 @@
         <div class="text-center mb-12 lg:mb-16">
             <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Simple Process</span>
             <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Get started with your online consultation in just 4 easy steps.</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Consult a doctor online in just a few simple steps and get quality care with Telehealth Mart.</p>
+            <p class="text-gray-500 max-w-2xl mx-auto mt-2 text-sm">टेलीहेल्थ मार्ट के साथ घर बैठे अनुभवी विशेषज्ञों द्वारा आसानी से परामर्श प्राप्त करें।</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -467,7 +468,8 @@
             <div class="text-center relative">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">1</div>
                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Register</h3>
-                <p class="text-gray-600 text-sm">Create your account with basic details like name, email, and phone number.</p>
+                <p class="text-gray-600 text-sm">Sign up using your name and mobile number.</p>
+                <p class="text-gray-400 text-xs mt-1">सिर्फ नाम और मोबाइल नंबर से पंजीकरण करें।</p>
                 <!-- Arrow (hidden on mobile) -->
                 <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
                     <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
@@ -479,8 +481,9 @@
             <!-- Step 2 -->
             <div class="text-center relative">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">2</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Find a Doctor</h3>
-                <p class="text-gray-600 text-sm">Browse specialists, check their qualifications, ratings, and availability.</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Choose Doctor</h3>
+                <p class="text-gray-600 text-sm">Select a doctor based on your health concern or specialty.</p>
+                <p class="text-gray-400 text-xs mt-1">अपनी समस्या के अनुसार डॉक्टर चुनें।</p>
                 <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
                     <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
@@ -491,8 +494,9 @@
             <!-- Step 3 -->
             <div class="text-center relative">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">3</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Book Appointment</h3>
-                <p class="text-gray-600 text-sm">Select a convenient date and time slot and confirm your appointment.</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Book Time Slot</h3>
+                <p class="text-gray-600 text-sm">Pick a suitable date and time for your consultation.</p>
+                <p class="text-gray-400 text-xs mt-1">अपनी सुविधा के अनुसार समय निर्धारित करें।</p>
                 <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
                     <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
@@ -503,8 +507,9 @@
             <!-- Step 4 -->
             <div class="text-center">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">4</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Consult Online</h3>
-                <p class="text-gray-600 text-sm">Join the video call at your appointment time and get your prescription.</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Consult & Get Prescription</h3>
+                <p class="text-gray-600 text-sm">Connect with the doctor via video or audio call and receive advice.</p>
+                <p class="text-gray-400 text-xs mt-1">ऑनलाइन परामर्श लें और डॉक्टर की सलाह प्राप्त करें।</p>
             </div>
         </div>
     </div>
@@ -566,7 +571,8 @@
 <section class="bg-gradient-to-r from-brand-600 to-brand-700 py-16 lg:py-20">
     <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Start Your Health Journey Today</h2>
-        <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">Register now and connect with verified doctors for online consultations. Your health is just a click away.</p>
+        <p class="text-brand-100 text-lg mb-2 max-w-2xl mx-auto">Register with Telehealth Mart and connect with experienced doctors across India through simple online consultations.</p>
+        <p class="text-brand-200 text-base mb-8 max-w-2xl mx-auto">आज ही पंजीकरण करें और घर बैठे डॉक्टर से परामर्श प्राप्त करें।</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-700 rounded-lg font-bold text-lg hover:bg-brand-50 transition shadow-lg">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

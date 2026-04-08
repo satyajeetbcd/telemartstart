@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'About Us - Tele Health Mart')
+@section('title', 'About Us - Telehealth Mart')
 
 @section('content')
 
@@ -8,12 +8,12 @@
 <section class="bg-gradient-to-br from-brand-50 via-white to-brand-50 py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">About Us</span>
-        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">About Tele Health Mart</h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">We are committed to providing the highest quality telemedicine services with a focus on patient convenience and care.</p>
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Telehealth Mart: Consult Better. Live Healthier.</h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">An initiative by Nirmala Welfare Foundation to make quality healthcare accessible across India.</p>
     </div>
 </section>
 
-<!-- Mission Section -->
+<!-- About Content Section -->
 <section class="py-16 lg:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -26,8 +26,8 @@
                         </svg>
                     </div>
                     <div class="absolute -bottom-4 -right-4 bg-brand-600 text-white rounded-xl p-4 shadow-lg">
-                        <p class="text-2xl font-bold">24/7</p>
-                        <p class="text-sm text-brand-100">Available</p>
+                        <p class="text-2xl font-bold">NWF</p>
+                        <p class="text-sm text-brand-100">Initiative</p>
                     </div>
                 </div>
             </div>
@@ -35,8 +35,10 @@
             <!-- Right Content -->
             <div>
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">Tele Health Mart is a trusted telemedicine platform that connects patients with verified and licensed doctors across India. Our mission is to make quality healthcare accessible, affordable, and convenient for everyone, regardless of their location.</p>
-                <p class="text-gray-600 mb-8 leading-relaxed">We believe that everyone deserves access to quality healthcare. Through our platform, patients can consult with experienced doctors from the comfort of their homes, receive instant e-prescriptions, and manage their complete health records digitally.</p>
+                <p class="text-gray-600 mb-4 leading-relaxed">Telehealth Mart, an initiative by Nirmala Welfare Foundation, is a telehealth platform that connects experienced and qualified doctors across India with patients in suburban, Tier-3 cities, and rural areas through online consultations. Our goal is to make quality healthcare accessible without the need for long-distance travel, especially in regions where specialist care is limited.</p>
+                <p class="text-gray-600 mb-4 leading-relaxed">In many smaller towns and villages, access to experienced doctors is still a challenge. Telehealth Mart helps bridge this gap by enabling patients to consult verified medical professionals using their mobile phone or computer. From general health concerns to specialist advice, patients can receive guidance from trusted doctors without leaving their locality.</p>
+                <p class="text-gray-600 mb-4 leading-relaxed">We focus on improving accessibility, affordability, and convenience. Patients can book appointments, consult doctors online, share medical reports, and receive digital prescriptions in a simple and secure way. This helps save time, reduce travel expenses, and ensure timely medical support for families in underserved communities.</p>
+                <p class="text-gray-600 mb-6 leading-relaxed">Designed to be easy to use and reliable, Telehealth Mart aims to extend quality healthcare services beyond major cities. By connecting doctors with patients across rural and semi-urban India, we are working towards improving healthcare access where it is needed the most.</p>
 
                 <div class="grid grid-cols-2 gap-6">
                     <div class="text-center p-4 bg-brand-50 rounded-xl">
@@ -52,8 +54,8 @@
                         <p class="text-sm text-gray-600 mt-1">Specializations</p>
                     </div>
                     <div class="text-center p-4 bg-brand-50 rounded-xl">
-                        <p class="text-3xl font-bold text-brand-600">24/7</p>
-                        <p class="text-sm text-gray-600 mt-1">Support Available</p>
+                        <p class="text-3xl font-bold text-brand-600">28+</p>
+                        <p class="text-sm text-gray-600 mt-1">States Covered</p>
                     </div>
                 </div>
             </div>
@@ -65,8 +67,8 @@
 <section class="py-16 lg:py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Here's what makes Tele Health Mart the preferred choice for online healthcare.</p>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Telehealth Mart combines trusted doctors, simple technology, and affordable consultations.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -76,8 +78,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                     </svg>
                 </div>
-                <h4 class="font-semibold text-gray-900 mb-2">Verified & Licensed Doctors</h4>
-                <p class="text-gray-600 text-sm">All doctors on our platform are verified with valid medical licenses and KYC documentation.</p>
+                <h4 class="font-semibold text-gray-900 mb-2">Verified & Qualified Doctors</h4>
+                <p class="text-gray-600 text-sm">Consult experienced doctors verified with valid credentials and professional qualifications across multiple specialties.</p>
             </div>
 
             <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -87,7 +89,7 @@
                     </svg>
                 </div>
                 <h4 class="font-semibold text-gray-900 mb-2">Secure & Private</h4>
-                <p class="text-gray-600 text-sm">Your health data is encrypted and stored securely. We follow strict privacy guidelines.</p>
+                <p class="text-gray-600 text-sm">Your personal and medical information is kept safe. We follow secure systems to protect your privacy.</p>
             </div>
 
             <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -97,7 +99,7 @@
                     </svg>
                 </div>
                 <h4 class="font-semibold text-gray-900 mb-2">Affordable Consultation</h4>
-                <p class="text-gray-600 text-sm">Quality healthcare at affordable prices. No hidden charges or surprise fees.</p>
+                <p class="text-gray-600 text-sm">Access quality healthcare at reasonable consultation charges, suitable for families in smaller towns and villages.</p>
             </div>
 
             <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -107,7 +109,7 @@
                     </svg>
                 </div>
                 <h4 class="font-semibold text-gray-900 mb-2">Digital Prescriptions</h4>
-                <p class="text-gray-600 text-sm">Get instant e-prescriptions that can be shared with any pharmacy digitally.</p>
+                <p class="text-gray-600 text-sm">Receive prescriptions online after consultation. Easily share them with nearby pharmacies.</p>
             </div>
 
             <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -117,7 +119,7 @@
                     </svg>
                 </div>
                 <h4 class="font-semibold text-gray-900 mb-2">Multi-Language Support</h4>
-                <p class="text-gray-600 text-sm">Access healthcare services in Hindi, English, and other regional languages.</p>
+                <p class="text-gray-600 text-sm">Consult doctors in Hindi, English, and other regional languages for better understanding and comfort.</p>
             </div>
 
             <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -126,8 +128,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
-                <h4 class="font-semibold text-gray-900 mb-2">Quick Turnaround</h4>
-                <p class="text-gray-600 text-sm">Get your consultation within minutes. No long waiting rooms or travel time needed.</p>
+                <h4 class="font-semibold text-gray-900 mb-2">Quick & Convenient Care</h4>
+                <p class="text-gray-600 text-sm">Avoid long travel and waiting time. Get medical advice from home through simple online consultations.</p>
             </div>
         </div>
     </div>
@@ -136,8 +138,9 @@
 <!-- CTA Section -->
 <section class="bg-gradient-to-r from-brand-600 to-brand-700 py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Join Thousands of Happy Patients</h2>
-        <p class="text-brand-100 text-lg mb-8">Experience quality healthcare from the comfort of your home.</p>
+        <h2 class="text-3xl font-bold text-white mb-4">Start Your Health Journey Today</h2>
+        <p class="text-brand-100 text-lg mb-2">Register with Telehealth Mart and connect with experienced doctors across India through simple online consultations.</p>
+        <p class="text-brand-200 text-base mb-8">आज ही पंजीकरण करें और घर बैठे डॉक्टर से परामर्श प्राप्त करें।</p>
         <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-700 rounded-lg font-bold text-lg hover:bg-brand-50 transition shadow-lg">
             Get Started Free
         </a>

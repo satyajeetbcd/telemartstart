@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'How It Works - Tele Health Mart')
+@section('title', 'How It Works - Telehealth Mart')
 
 @section('content')
 
@@ -9,7 +9,8 @@
     <div class="max-w-7xl mx-auto px-4 text-center">
         <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Simple Process</span>
         <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">How It Works</h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Get started with your online consultation in just 4 easy steps. It's simple, fast, and convenient.</p>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Consult a doctor online in just a few simple steps and get quality care with Telehealth Mart.</p>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-2">टेलीहेल्थ मार्ट के साथ घर बैठे अनुभवी विशेषज्ञों द्वारा आसानी से परामर्श प्राप्त करें।</p>
     </div>
 </section>
 
@@ -21,7 +22,8 @@
             <div class="text-center relative">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">1</div>
                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Register</h3>
-                <p class="text-gray-600 text-sm">Create your account with basic details like name, email, and phone number.</p>
+                <p class="text-gray-600 text-sm">Sign up using your name and mobile number.</p>
+                <p class="text-gray-400 text-xs mt-1">सिर्फ नाम और मोबाइल नंबर से पंजीकरण करें।</p>
                 <!-- Arrow (hidden on mobile) -->
                 <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
                     <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
@@ -33,8 +35,9 @@
             <!-- Step 2 -->
             <div class="text-center relative">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">2</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Find a Doctor</h3>
-                <p class="text-gray-600 text-sm">Browse specialists, check their qualifications, ratings, and availability.</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Choose Doctor</h3>
+                <p class="text-gray-600 text-sm">Select a doctor based on your health concern or specialty.</p>
+                <p class="text-gray-400 text-xs mt-1">अपनी समस्या के अनुसार डॉक्टर चुनें।</p>
                 <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
                     <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
@@ -45,8 +48,9 @@
             <!-- Step 3 -->
             <div class="text-center relative">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">3</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Book Appointment</h3>
-                <p class="text-gray-600 text-sm">Select a convenient date and time slot and confirm your appointment.</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Book Time Slot</h3>
+                <p class="text-gray-600 text-sm">Pick a suitable date and time for your consultation.</p>
+                <p class="text-gray-400 text-xs mt-1">अपनी सुविधा के अनुसार समय निर्धारित करें।</p>
                 <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
                     <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
@@ -57,8 +61,9 @@
             <!-- Step 4 -->
             <div class="text-center">
                 <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">4</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Consult Online</h3>
-                <p class="text-gray-600 text-sm">Join the video call at your appointment time and get your prescription.</p>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Consult & Get Prescription</h3>
+                <p class="text-gray-600 text-sm">Connect with the doctor via video or audio call and receive advice.</p>
+                <p class="text-gray-400 text-xs mt-1">ऑनलाइन परामर्श लें और डॉक्टर की सलाह प्राप्त करें।</p>
             </div>
         </div>
     </div>
@@ -75,8 +80,9 @@
                 </svg>
             </div>
             <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 1: Create Your Account</h3>
-                <p class="text-gray-600">Sign up in minutes with your basic details. We only ask for your name, email, phone number, and a password. Your information is kept secure and private at all times.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 1: Register</h3>
+                <p class="text-gray-600">Sign up using your name and mobile number. Registration is quick and simple so you can start consulting a doctor right away.</p>
+                <p class="text-gray-400 text-sm mt-1">सिर्फ नाम और मोबाइल नंबर से पंजीकरण करें।</p>
             </div>
         </div>
 
@@ -88,8 +94,9 @@
                 </svg>
             </div>
             <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 2: Find the Right Doctor</h3>
-                <p class="text-gray-600">Browse our network of verified and licensed doctors. Filter by specialization, check OPD timings, and view doctor profiles to find the best match for your healthcare needs.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 2: Choose Doctor</h3>
+                <p class="text-gray-600">Select a doctor based on your health concern or specialty. Browse profiles of experienced and verified doctors across India.</p>
+                <p class="text-gray-400 text-sm mt-1">अपनी समस्या के अनुसार डॉक्टर चुनें।</p>
             </div>
         </div>
 
@@ -101,8 +108,9 @@
                 </svg>
             </div>
             <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 3: Book Your Appointment</h3>
-                <p class="text-gray-600">Choose a convenient date and time slot from the doctor's available schedule. Get instant confirmation and reminders so you never miss your appointment.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 3: Book Time Slot</h3>
+                <p class="text-gray-600">Pick a suitable date and time for your consultation. Choose a convenient time slot based on your availability and the doctor's schedule.</p>
+                <p class="text-gray-400 text-sm mt-1">अपनी सुविधा के अनुसार समय निर्धारित करें।</p>
             </div>
         </div>
 
@@ -115,7 +123,8 @@
             </div>
             <div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 4: Consult & Get Prescription</h3>
-                <p class="text-gray-600">Join your video or audio consultation at the scheduled time. After the consultation, receive your e-prescription instantly which you can download and share with any pharmacy.</p>
+                <p class="text-gray-600">Connect with the doctor via video or audio call and receive medical advice. After consultation, receive your digital prescription which you can download and use at nearby pharmacies.</p>
+                <p class="text-gray-400 text-sm mt-1">ऑनलाइन परामर्श लें और डॉक्टर की सलाह प्राप्त करें।</p>
             </div>
         </div>
     </div>
@@ -124,8 +133,9 @@
 <!-- CTA Section -->
 <section class="bg-gradient-to-r from-brand-600 to-brand-700 py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-        <p class="text-brand-100 text-lg mb-8">Register now and book your first consultation in minutes.</p>
+        <h2 class="text-3xl font-bold text-white mb-4">Start Your Health Journey Today</h2>
+        <p class="text-brand-100 text-lg mb-2">Register with Telehealth Mart and connect with experienced doctors across India through simple online consultations.</p>
+        <p class="text-brand-200 text-base mb-8">आज ही पंजीकरण करें और घर बैठे डॉक्टर से परामर्श प्राप्त करें।</p>
         <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-700 rounded-lg font-bold text-lg hover:bg-brand-50 transition shadow-lg">
             Register Now
         </a>
