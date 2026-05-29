@@ -9,15 +9,20 @@ class LandingController extends Controller
 {
     public function index()
     {
-        $doctors = [
-            ['name' => 'Dr. Rajesh Kumar', 'specialization' => 'General Medicine', 'opd_days' => 'Mon - Fri', 'timing_from' => '09:00 AM', 'timing_to' => '01:00 PM'],
-            ['name' => 'Dr. Priya Sharma', 'specialization' => 'Pediatrics', 'opd_days' => 'Mon - Sat', 'timing_from' => '10:00 AM', 'timing_to' => '02:00 PM'],
-            ['name' => 'Dr. Amit Verma', 'specialization' => 'Cardiology', 'opd_days' => 'Mon, Wed, Fri', 'timing_from' => '11:00 AM', 'timing_to' => '03:00 PM'],
-            ['name' => 'Dr. Sunita Patel', 'specialization' => 'Dermatology', 'opd_days' => 'Tue - Sat', 'timing_from' => '09:30 AM', 'timing_to' => '01:30 PM'],
-            ['name' => 'Dr. Vikram Singh', 'specialization' => 'Orthopedics', 'opd_days' => 'Mon - Fri', 'timing_from' => '10:00 AM', 'timing_to' => '04:00 PM'],
-            ['name' => 'Dr. Neha Gupta', 'specialization' => 'Gynecology', 'opd_days' => 'Mon - Sat', 'timing_from' => '09:00 AM', 'timing_to' => '12:00 PM'],
-        ];
+        // Fetch only backend-stored, verified doctors (no fake data).
+        $doctors = [];
+        try {
+            $response = Http::timeout(10)->get(config('services.telemartmain.api_url') . '/doctors');
+            if ($response->successful()) {
+                $doctors = $response->json('doctors', []);
+            }
+        } catch (\Throwable $e) {
+            $doctors = [];
+        }
 
-        return view('pages.landing', compact('doctors'));
+        // Base URL for building doctor profile-image links served from the backend.
+        $imageBaseUrl = rtrim(config('services.telemartmain.base_url'), '/') . '/storage/';
+
+        return view('pages.landing', compact('doctors', 'imageBaseUrl'));
     }
 }

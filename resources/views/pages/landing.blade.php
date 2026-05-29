@@ -25,8 +25,8 @@
                         </svg>
                         Book Consultation
                     </a>
-                    <a href="#how-it-works" class="inline-flex items-center justify-center px-8 py-3 border-2 border-brand-600 text-brand-600 rounded-lg font-semibold hover:bg-brand-50 transition">
-                        Learn More
+                    <a href="#doctors" class="inline-flex items-center justify-center px-8 py-3 border-2 border-brand-600 text-brand-600 rounded-lg font-semibold hover:bg-brand-50 transition">
+                        Meet Our Doctors
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                         </svg>
@@ -73,11 +73,11 @@
                          x-transition:leave-end="opacity-0 scale-95"
                          class="absolute inset-0">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-72 h-72 bg-brand-100 rounded-full flex items-center justify-center shadow-xl">
-                                <svg class="w-36 h-36 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                                </svg>
-                            </div>
+                            <img src="{{ asset('images/banner/slide-1.jpg') }}"
+                                 alt="Indian patient on a video consultation"
+                                 onerror="this.onerror=null;this.src='{{ asset('images/logo.png') }}';this.classList.add('object-contain','p-16');"
+                                 class="w-72 h-72 rounded-full object-cover shadow-xl ring-8 ring-white bg-brand-100">
+
                         </div>
                         <div class="absolute top-2 left-0 bg-white rounded-xl shadow-lg p-3 flex items-center space-x-2 hero-badge">
                             <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
@@ -127,11 +127,10 @@
                          x-transition:leave-end="opacity-0 scale-95"
                          class="absolute inset-0">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-72 h-72 bg-blue-100 rounded-full flex items-center justify-center shadow-xl">
-                                <svg class="w-36 h-36 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
-                            </div>
+                            <img src="{{ asset('images/banner/slide-2.jpg') }}"
+                                 alt="Indian family accessing healthcare online"
+                                 onerror="this.onerror=null;this.src='{{ asset('images/logo.png') }}';this.classList.add('object-contain','p-16');"
+                                 class="w-72 h-72 rounded-full object-cover shadow-xl ring-8 ring-white bg-blue-100">
                         </div>
                         <div class="absolute top-2 left-0 bg-white rounded-xl shadow-lg p-3 flex items-center space-x-2 hero-badge">
                             <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
@@ -181,12 +180,10 @@
                          x-transition:leave-end="opacity-0 scale-95"
                          class="absolute inset-0">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-72 h-72 bg-emerald-100 rounded-full flex items-center justify-center shadow-xl">
-                                <svg class="w-36 h-36 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4m0 0v4m0-4h4m-4 0H8"/>
-                                </svg>
-                            </div>
+                            <img src="{{ asset('images/banner/slide-3.jpg') }}"
+                                 alt="Indian doctor reviewing a digital prescription"
+                                 onerror="this.onerror=null;this.src='{{ asset('images/logo.png') }}';this.classList.add('object-contain','p-16');"
+                                 class="w-72 h-72 rounded-full object-cover shadow-xl ring-8 ring-white bg-emerald-100">
                         </div>
                         <div class="absolute top-2 left-0 bg-white rounded-xl shadow-lg p-3 flex items-center space-x-2 hero-badge">
                             <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
@@ -236,11 +233,10 @@
                          x-transition:leave-end="opacity-0 scale-95"
                          class="absolute inset-0">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-72 h-72 bg-purple-100 rounded-full flex items-center justify-center shadow-xl">
-                                <svg class="w-36 h-36 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
+                            <img src="{{ asset('images/banner/slide-4.jpg') }}"
+                                 alt="Healthcare reaching rural India"
+                                 onerror="this.onerror=null;this.src='{{ asset('images/logo.png') }}';this.classList.add('object-contain','p-16');"
+                                 class="w-72 h-72 rounded-full object-cover shadow-xl ring-8 ring-white bg-purple-100">
                         </div>
                         <div class="absolute top-2 left-0 bg-white rounded-xl shadow-lg p-3 flex items-center space-x-2 hero-badge">
                             <div class="w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
@@ -290,11 +286,10 @@
                          x-transition:leave-end="opacity-0 scale-95"
                          class="absolute inset-0">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-72 h-72 bg-orange-100 rounded-full flex items-center justify-center shadow-xl">
-                                <svg class="w-36 h-36 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </div>
+                            <img src="{{ asset('images/banner/slide-5.jpg') }}"
+                                 alt="Indian senior receiving 24/7 telehealth care"
+                                 onerror="this.onerror=null;this.src='{{ asset('images/logo.png') }}';this.classList.add('object-contain','p-16');"
+                                 class="w-72 h-72 rounded-full object-cover shadow-xl ring-8 ring-white bg-orange-100">
                         </div>
                         <div class="absolute top-2 left-0 bg-white rounded-xl shadow-lg p-3 flex items-center space-x-2 hero-badge">
                             <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
@@ -374,186 +369,89 @@
     </div>
 </section>
 
-<!-- Services Section -->
-<section class="py-16 lg:py-24 bg-white" id="services">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 lg:mb-16">
-            <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">What We Offer</span>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Supporting better healthcare access through reliable and easy-to-use telemedicine services. Connect with qualified doctors across India through simple and affordable online consultations.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service 1: OPD Consultation -->
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6 group">
-                <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brand-100 transition">
-                    <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">OPD Consultation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Consult qualified general physicians through secure video or audio calls. Patients in small towns and rural areas can receive primary medical advice without travelling to bigger cities.</p>
-            </div>
-
-            <!-- Service 2: Specialist Consultation -->
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6 group">
-                <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-100 transition">
-                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Specialist Consultation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Connect with experienced specialists across India including cardiologists, dermatologists, pediatricians and more. Get expert opinions even when specialists are not available locally.</p>
-            </div>
-
-            <!-- Service 3: E-Prescriptions -->
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6 group">
-                <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-purple-100 transition">
-                    <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">E-Prescriptions</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Receive digital prescriptions after your consultation. Easy to download, share, and use at nearby pharmacies for convenient treatment.</p>
-            </div>
-
-            <!-- Service 4: Health Records -->
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6 group">
-                <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-orange-100 transition">
-                    <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Health Records</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Store medical reports, prescriptions, and consultation history in one secure place. Access your records anytime for better continuity of care.</p>
-            </div>
-
-            <!-- Service 5: Appointment Booking -->
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6 group">
-                <div class="w-14 h-14 bg-teal-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-teal-100 transition">
-                    <svg class="w-7 h-7 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Appointment Booking</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Book consultations with available doctors through a simple scheduling system. Choose a convenient time slot based on your availability.</p>
-            </div>
-
-            <!-- Service 6: Follow-up Care -->
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6 group">
-                <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-red-100 transition">
-                    <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Follow-up Care</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Schedule follow-up consultations to monitor progress and adjust treatment when needed. Ensures continuous care without repeated travel.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section class="py-16 lg:py-24 bg-brand-50" id="how-it-works">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 lg:mb-16">
-            <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Simple Process</span>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Consult a doctor online in just a few simple steps and get quality care with Telehealth Mart.</p>
-            <p class="text-gray-500 max-w-2xl mx-auto mt-2 text-sm">टेलीहेल्थ मार्ट के साथ घर बैठे अनुभवी विशेषज्ञों द्वारा आसानी से परामर्श प्राप्त करें।</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Step 1 -->
-            <div class="text-center relative">
-                <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">1</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Register</h3>
-                <p class="text-gray-600 text-sm">Sign up using your name and mobile number.</p>
-                <p class="text-gray-400 text-xs mt-1">सिर्फ नाम और मोबाइल नंबर से पंजीकरण करें।</p>
-                <!-- Arrow (hidden on mobile) -->
-                <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
-                    <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="text-center relative">
-                <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">2</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Choose Doctor</h3>
-                <p class="text-gray-600 text-sm">Select a doctor based on your health concern or specialty.</p>
-                <p class="text-gray-400 text-xs mt-1">अपनी समस्या के अनुसार डॉक्टर चुनें।</p>
-                <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
-                    <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="text-center relative">
-                <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">3</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Book Time Slot</h3>
-                <p class="text-gray-600 text-sm">Pick a suitable date and time for your consultation.</p>
-                <p class="text-gray-400 text-xs mt-1">अपनी सुविधा के अनुसार समय निर्धारित करें।</p>
-                <div class="hidden lg:block absolute top-8 left-[60%] w-[80%]">
-                    <svg class="w-full h-4 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 200 20">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 10h180M170 4l10 6-10 6" stroke-dasharray="6 4"/>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="text-center">
-                <div class="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-5 text-white text-xl font-bold shadow-lg shadow-brand-600/30">4</div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Consult & Get Prescription</h3>
-                <p class="text-gray-600 text-sm">Connect with the doctor via video or audio call and receive advice.</p>
-                <p class="text-gray-400 text-xs mt-1">ऑनलाइन परामर्श लें और डॉक्टर की सलाह प्राप्त करें।</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Doctors Visiting Section -->
-<section class="py-16 lg:py-24 bg-white">
+<section class="py-16 lg:py-24 bg-gradient-to-b from-white to-brand-50/40" id="doctors">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12 lg:mb-16">
             <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Our Doctors</span>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Doctors Visiting</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Meet our verified and experienced doctors available for online consultations.</p>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Meet Our Verified Doctors</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Every doctor on Telehealth Mart is KYC-verified and available for secure online consultations.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach($doctors as $doctor)
-            <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow p-6">
-                <div class="flex items-center mb-4">
-                    <div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center mr-4">
-                        <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-900">{{ $doctor['name'] }}</h3>
-                        <p class="text-brand-600 text-sm font-medium">{{ $doctor['specialization'] }}</p>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @forelse($doctors as $doctor)
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+                {{-- Header row: doctor image (left) + TeleHealthMart logo (right) --}}
+                <div class="flex items-center justify-between mb-5">
+                    @if(!empty($doctor['profile_image']))
+                        <img src="{{ $imageBaseUrl . ltrim($doctor['profile_image'], '/') }}"
+                             alt="{{ $doctor['name'] }}"
+                             onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';"
+                             style="width:80px;height:80px;"
+                             class="rounded-full object-cover ring-2 ring-brand-100 shadow-sm bg-white">
+                        <div style="width:80px;height:80px;display:none;" class="rounded-full ring-2 ring-brand-100 bg-brand-100 items-center justify-center text-3xl font-bold text-brand-700">
+                            {{ strtoupper(substr($doctor['name'], 0, 1)) }}
+                        </div>
+                    @else
+                        <div style="width:80px;height:80px;" class="rounded-full ring-2 ring-brand-100 bg-brand-100 flex items-center justify-center text-3xl font-bold text-brand-700">
+                            {{ strtoupper(substr($doctor['name'], 0, 1)) }}
+                        </div>
+                    @endif
+
+                    <img src="{{ asset('images/logo.png') }}" alt="Telehealth Mart" style="height:40px;width:auto;">
                 </div>
-                <div class="space-y-2 text-sm text-gray-600">
-                    <div class="flex items-center">
-                        <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                        </svg>
-                        <span>{{ $doctor['opd_days'] }}</span>
+
+                <div class="flex items-center gap-1.5">
+                    <h3 class="text-xl font-bold text-gray-900">Dr. {{ $doctor['name'] }}</h3>
+                        @if($doctor['verified'] ?? false)
+                            <svg class="w-5 h-5 text-brand-600 shrink-0" viewBox="0 0 20 20" fill="currentColor" title="Verified">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        @endif
                     </div>
-                    <div class="flex items-center">
-                        <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>{{ $doctor['timing_from'] }} - {{ $doctor['timing_to'] }}</span>
+
+                    <div class="mt-1.5 flex flex-wrap items-center gap-2">
+                        <span class="inline-block px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full">{{ $doctor['specialization'] }}</span>
+                        @if(!empty($doctor['qualifications']))
+                            <span class="text-gray-500 text-xs font-medium">{{ $doctor['qualifications'] }}</span>
+                        @endif
                     </div>
-                </div>
+
+                    {{-- Stats row --}}
+                    <div class="mt-5 flex items-stretch rounded-xl bg-gray-50 border border-gray-100 divide-x divide-gray-200 text-center">
+                        <div class="flex-1 py-3 px-2">
+                            <p class="text-base font-bold text-gray-900">{{ $doctor['experience_years'] ?? '—' }}@if(!empty($doctor['experience_years']))+@endif</p>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Yrs Exp</p>
+                        </div>
+                        <div class="flex-1 py-3 px-2">
+                            <p class="text-base font-bold text-gray-900">@if(!empty($doctor['consultation_fee']))₹{{ $doctor['consultation_fee'] }}@else—@endif</p>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Per Consult</p>
+                        </div>
+                        <div class="flex-1 py-3 px-2">
+                            <p class="text-base font-bold text-green-600 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            </p>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">KYC Verified</p>
+                        </div>
+                    </div>
+
+                    <a href="{{ route('register') }}" class="mt-5 group/btn flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-brand-600 to-brand-700 text-white rounded-xl text-sm font-semibold hover:from-brand-700 hover:to-brand-800 transition shadow-md shadow-brand-600/30">
+                        Book Consultation
+                        <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
             </div>
-            @endforeach
+            @empty
+            <div class="col-span-full text-center py-12">
+                <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </div>
+                <p class="text-gray-500 font-medium">Verified doctors will appear here soon.</p>
+                <p class="text-sm text-gray-400 mt-1">Our medical team is being onboarded and KYC-verified.</p>
+            </div>
+            @endforelse
         </div>
 
         <div class="text-center mt-10">
