@@ -12,6 +12,7 @@
     @else
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.17/dist/tailwind.min.css">
     @endif
+    <style>[x-cloak]{display:none !important;}</style>
     @stack('styles')
 </head>
 <body class="bg-gray-50 font-sans antialiased" x-data="{ sidebarOpen: false }">

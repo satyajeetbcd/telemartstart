@@ -3,7 +3,7 @@
 @section('title', 'My Appointments')
 
 @section('content')
-<div class="bg-white rounded-xl shadow-sm border border-gray-100">
+<div class="bg-white rounded-xl shadow-sm border border-gray-100" x-data="appointmentPayments()">
     <div class="p-6 border-b border-gray-100">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <h3 class="text-lg font-semibold text-gray-900">All Appointments</h3>
@@ -51,10 +51,31 @@
                             <span class="px-2 py-1 text-xs font-medium rounded-full {{ $color }}">
                                 {{ ucfirst($appointment['status'] ?? 'N/A') }}
                             </span>
+                            @php $paymentStatus = $appointment['payment_status'] ?? 'pending'; @endphp
+                            @if($paymentStatus === 'paid')
+                                <span class="mt-1 inline-block px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">Paid</span>
+                            @elseif($paymentStatus === 'refunded')
+                                <span class="mt-1 inline-block px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800">Refunded</span>
+                            @elseif(($appointment['status'] ?? '') !== 'cancelled')
+                                <span class="mt-1 inline-block px-2 py-1 text-xs font-medium rounded-full bg-orange-100 text-orange-800">Payment required</span>
+                            @endif
                         </td>
                         <td class="px-6 py-4 text-sm text-gray-500">{{ $appointment['consultation_fee'] ?? 'N/A' }}</td>
                         <td class="px-6 py-4 text-sm">
                             <div class="flex items-center gap-2">
+                                @if(($appointment['payment_status'] ?? 'pending') !== 'paid' && ($appointment['payment_status'] ?? '') !== 'refunded' && ($appointment['status'] ?? '') !== 'cancelled')
+                                    <button type="button"
+                                            @click="payNow({{ $appointment['id'] }})"
+                                            :disabled="loadingId === {{ $appointment['id'] }}"
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-600 text-white text-xs font-medium rounded-lg hover:bg-green-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                                            title="Pay consultation fee">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                        </svg>
+                                        <span x-show="loadingId !== {{ $appointment['id'] }}">Pay Now</span>
+                                        <span x-show="loadingId === {{ $appointment['id'] }}" x-cloak>Processing…</span>
+                                    </button>
+                                @endif
                                 @if(!empty($appointment['zoom_join_url']) && in_array($appointment['status'], ['confirmed']))
                                     <a href="{{ $appointment['zoom_join_url'] }}"
                                        target="_blank"
@@ -92,3 +113,92 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    function appointmentPayments() {
+        return {
+            loadingId: null,
+
+            csrf() {
+                return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            },
+
+            async payNow(appointmentId) {
+                this.loadingId = appointmentId;
+                try {
+                    const res = await fetch('{{ route('patient.payments.create-order') }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': this.csrf(),
+                        },
+                        body: JSON.stringify({ appointment_id: appointmentId }),
+                    });
+                    const order = await res.json();
+
+                    if (!res.ok) {
+                        this.loadingId = null;
+                        alert(order.message || 'Could not start the payment. Please try again.');
+                        return;
+                    }
+
+                    const rzp = new Razorpay({
+                        key: order.key_id,
+                        amount: order.amount,
+                        currency: order.currency,
+                        name: order.name,
+                        description: order.description,
+                        order_id: order.order_id,
+                        prefill: order.prefill,
+                        theme: { color: '#0d9488' },
+                        handler: (response) => this.verify(response),
+                        modal: { ondismiss: () => { this.loadingId = null; } },
+                    });
+
+                    rzp.on('payment.failed', (resp) => {
+                        this.loadingId = null;
+                        alert('Payment failed: ' + ((resp.error && resp.error.description) || 'Please try again.'));
+                    });
+
+                    rzp.open();
+                } catch (e) {
+                    this.loadingId = null;
+                    alert('Something went wrong starting the payment.');
+                }
+            },
+
+            async verify(response) {
+                try {
+                    const res = await fetch('{{ route('patient.payments.verify') }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': this.csrf(),
+                        },
+                        body: JSON.stringify({
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_signature: response.razorpay_signature,
+                        }),
+                    });
+                    const data = await res.json();
+
+                    if (res.ok && data.status === 'paid') {
+                        window.location.reload();
+                    } else {
+                        this.loadingId = null;
+                        alert(data.message || 'We could not verify your payment. If you were charged, it will be reconciled shortly.');
+                    }
+                } catch (e) {
+                    this.loadingId = null;
+                    alert('Payment verification error. If you were charged, it will be reconciled shortly.');
+                }
+            },
+        };
+    }
+</script>
+@endpush

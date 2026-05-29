@@ -33,6 +33,8 @@ Route::middleware('api.token')->prefix('patient')->name('patient.')->group(funct
     Route::get('/book-appointment', [PatientDashboardController::class, 'bookAppointment'])->name('book-appointment');
     Route::get('/book-appointment/slots', [PatientDashboardController::class, 'getDoctorSlots'])->name('book-appointment.slots');
     Route::post('/book-appointment', [PatientDashboardController::class, 'storeAppointment'])->name('book-appointment.store');
+    Route::post('/payments/create-order', [PatientDashboardController::class, 'createPaymentOrder'])->name('payments.create-order');
+    Route::post('/payments/verify', [PatientDashboardController::class, 'verifyPayment'])->name('payments.verify');
     Route::get('/profile', [PatientDashboardController::class, 'profile'])->name('profile');
     Route::put('/profile', [PatientDashboardController::class, 'updateProfile'])->name('profile.update');
     Route::get('/medical-records', [PatientDashboardController::class, 'medicalRecords'])->name('medical-records');

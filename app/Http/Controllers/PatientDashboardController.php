@@ -231,6 +231,50 @@ class PatientDashboardController extends Controller
         return back()->with('error', $message)->withInput();
     }
 
+    /**
+     * Proxy: create a Razorpay order for an appointment (backend holds the secret).
+     */
+    public function createPaymentOrder(Request $request)
+    {
+        $request->validate([
+            'appointment_id' => 'required|integer',
+        ]);
+
+        $response = $this->apiPost('/patient/payments/create-order', [
+            'appointment_id' => $request->appointment_id,
+        ]);
+
+        if ($response === null) {
+            return response()->json(['message' => 'Session expired. Please login again.'], 401);
+        }
+
+        return response()->json($response->json(), $response->status());
+    }
+
+    /**
+     * Proxy: verify the Razorpay checkout signature server-side.
+     */
+    public function verifyPayment(Request $request)
+    {
+        $request->validate([
+            'razorpay_order_id' => 'required|string',
+            'razorpay_payment_id' => 'required|string',
+            'razorpay_signature' => 'required|string',
+        ]);
+
+        $response = $this->apiPost('/patient/payments/verify', $request->only([
+            'razorpay_order_id',
+            'razorpay_payment_id',
+            'razorpay_signature',
+        ]));
+
+        if ($response === null) {
+            return response()->json(['message' => 'Session expired. Please login again.'], 401);
+        }
+
+        return response()->json($response->json(), $response->status());
+    }
+
     public function medicalRecords()
     {
         $data = $this->apiGet('/patient/medical-records');
