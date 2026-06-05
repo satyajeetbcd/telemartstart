@@ -395,29 +395,38 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @forelse($doctors as $doctor)
-            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
-                {{-- Header row: doctor image (left) + TeleHealthMart logo (right) --}}
-                <div class="flex items-center justify-between mb-5">
-                    @if(!empty($doctor['profile_image']))
-                        <img src="{{ $imageBaseUrl . ltrim($doctor['profile_image'], '/') }}"
-                             alt="{{ $doctor['name'] }}"
-                             onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';"
-                             style="width:80px;height:80px;"
-                             class="rounded-full object-cover ring-2 ring-brand-100 shadow-sm bg-white">
-                        <div style="width:80px;height:80px;display:none;" class="rounded-full ring-2 ring-brand-100 bg-brand-100 items-center justify-center text-3xl font-bold text-brand-700">
-                            {{ strtoupper(substr($doctor['name'], 0, 1)) }}
-                        </div>
-                    @else
-                        <div style="width:80px;height:80px;" class="rounded-full ring-2 ring-brand-100 bg-brand-100 flex items-center justify-center text-3xl font-bold text-brand-700">
-                            {{ strtoupper(substr($doctor['name'], 0, 1)) }}
-                        </div>
-                    @endif
+            <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                {{-- Top accent bar --}}
+                <div class="h-1.5 bg-gradient-to-r from-brand-400 via-brand-600 to-brand-700"></div>
 
-                    <img src="{{ asset('images/logo.png') }}" alt="Telehealth Mart" style="height:40px;width:auto;">
-                </div>
+                <div class="p-6">
+                    {{-- Header row: doctor image (left, with availability dot) + TeleHealthMart logo (right) --}}
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="relative shrink-0">
+                            @if(!empty($doctor['profile_image']))
+                                <img src="{{ $imageBaseUrl . ltrim($doctor['profile_image'], '/') }}"
+                                     alt="{{ $doctor['name'] }}"
+                                     onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';"
+                                     style="width:84px;height:84px;"
+                                     class="rounded-full object-cover ring-4 ring-brand-50 shadow-md bg-white">
+                                <div style="width:84px;height:84px;display:none;" class="rounded-full ring-4 ring-brand-50 bg-gradient-to-br from-brand-100 to-brand-200 items-center justify-center text-3xl font-bold text-brand-700">
+                                    {{ strtoupper(substr($doctor['name'], 0, 1)) }}
+                                </div>
+                            @else
+                                <div style="width:84px;height:84px;" class="rounded-full ring-4 ring-brand-50 bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center text-3xl font-bold text-brand-700">
+                                    {{ strtoupper(substr($doctor['name'], 0, 1)) }}
+                                </div>
+                            @endif
+                            {{-- availability indicator --}}
+                            <span class="absolute bottom-1 right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full" title="Available for consultation"></span>
+                        </div>
 
-                <div class="flex items-center gap-1.5">
-                    <h3 class="text-xl font-bold text-gray-900">Dr. {{ $doctor['name'] }}</h3>
+                        <img src="{{ asset('images/logo.png') }}" alt="Telehealth Mart" style="height:38px;width:auto;">
+                    </div>
+
+                    {{-- Name + verified --}}
+                    <div class="flex items-center gap-1.5">
+                        <h3 class="text-xl font-bold text-gray-900">Dr. {{ $doctor['name'] }}</h3>
                         @if($doctor['verified'] ?? false)
                             <svg class="w-5 h-5 text-brand-600 shrink-0" viewBox="0 0 20 20" fill="currentColor" title="Verified">
                                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -425,28 +434,33 @@
                         @endif
                     </div>
 
-                    <div class="mt-1.5 flex flex-wrap items-center gap-2">
-                        <span class="inline-block px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full">{{ $doctor['specialization'] }}</span>
+                    {{-- Specialty + qualifications --}}
+                    <div class="mt-2 flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11a3 3 0 100-6 3 3 0 000 6zM5 11v3a5 5 0 0010 0M15 14a3 3 0 100 6 3 3 0 000-6z"/></svg>
+                            {{ $doctor['specialization'] }}
+                        </span>
                         @if(!empty($doctor['qualifications']))
                             <span class="text-gray-500 text-xs font-medium">{{ $doctor['qualifications'] }}</span>
                         @endif
                     </div>
 
-                    {{-- Stats row --}}
-                    <div class="mt-5 flex items-stretch rounded-xl bg-gray-50 border border-gray-100 divide-x divide-gray-200 text-center">
-                        <div class="flex-1 py-3 px-2">
-                            <p class="text-base font-bold text-gray-900">{{ $doctor['experience_years'] ?? '—' }}@if(!empty($doctor['experience_years']))+@endif</p>
-                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Yrs Exp</p>
+                    {{-- Stats tiles --}}
+                    <div class="mt-5 grid grid-cols-3 gap-2.5">
+                        <div class="rounded-xl bg-brand-50/70 border border-brand-100/60 py-3 px-1 text-center">
+                            <svg class="w-4 h-4 text-brand-500 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <p class="text-sm font-bold text-gray-900 leading-none">{{ $doctor['experience_years'] ?? '—' }}@if(!empty($doctor['experience_years']))+@endif</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wide mt-1">Years</p>
                         </div>
-                        <div class="flex-1 py-3 px-2">
-                            <p class="text-base font-bold text-gray-900">@if(!empty($doctor['consultation_fee']))₹{{ $doctor['consultation_fee'] }}@else—@endif</p>
-                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">Per Consult</p>
+                        <div class="rounded-xl bg-brand-50/70 border border-brand-100/60 py-3 px-1 text-center">
+                            <svg class="w-4 h-4 text-brand-500 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                            <p class="text-sm font-bold text-gray-900 leading-none">@if(!empty($doctor['consultation_fee']))₹{{ $doctor['consultation_fee'] }}@else—@endif</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wide mt-1">Consult</p>
                         </div>
-                        <div class="flex-1 py-3 px-2">
-                            <p class="text-base font-bold text-green-600 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                            </p>
-                            <p class="text-[11px] text-gray-500 uppercase tracking-wide">KYC Verified</p>
+                        <div class="rounded-xl bg-green-50 border border-green-100 py-3 px-1 text-center">
+                            <svg class="w-4 h-4 text-green-600 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <p class="text-sm font-bold text-green-700 leading-none">KYC</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wide mt-1">Verified</p>
                         </div>
                     </div>
 
@@ -454,6 +468,7 @@
                         Book Consultation
                         <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
+                </div>
             </div>
             @empty
             <div class="col-span-full text-center py-12">
