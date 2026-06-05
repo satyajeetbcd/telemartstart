@@ -370,6 +370,20 @@
 </section>
 
 
+<!-- How It Works Section -->
+<section class="py-16 lg:py-24 bg-white" id="how-it-works">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-10 lg:mb-12">
+            <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Simple Process</span>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Consult a doctor online in just four simple steps.</p>
+        </div>
+        <img src="{{ asset('images/how-it-works.png') }}"
+             alt="How Telehealth Mart works: Register, Choose Doctor, Book Time Slot, Consult & Get Prescription"
+             class="w-full h-auto rounded-2xl shadow-md border border-gray-100">
+    </div>
+</section>
+
 <!-- Doctors Visiting Section -->
 <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-brand-50/40" id="doctors">
     <div class="max-w-7xl mx-auto px-4">
