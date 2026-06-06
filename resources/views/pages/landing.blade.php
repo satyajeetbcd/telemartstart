@@ -371,16 +371,143 @@
 
 
 <!-- How It Works Section -->
+@php
+    $journeySteps = [
+        [
+            'title' => 'Book Appointment',
+            'hi'    => 'अपॉइंटमेंट बुक करें',
+            'desc'  => 'Choose telemedicine, pick a date & time, and add your reason for the visit.',
+            'icon'  => 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z',
+        ],
+        [
+            'title' => 'Register & Verify',
+            'hi'    => 'पंजीकरण और सत्यापन',
+            'desc'  => 'Sign up, verify your identity, and share your medical history & documents.',
+            'icon'  => 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+        ],
+        [
+            'title' => 'Consultation',
+            'hi'    => 'परामर्श',
+            'desc'  => 'Join the virtual call; the doctor reviews your symptoms & medical history.',
+            'icon'  => 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z',
+        ],
+        [
+            'title' => 'Diagnosis & Plan',
+            'hi'    => 'निदान और योजना',
+            'desc'  => 'The doctor provides a diagnosis, a treatment plan, and your next steps.',
+            'icon'  => 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
+        ],
+        [
+            'title' => 'Prescription & Advice',
+            'hi'    => 'प्रिस्क्रिप्शन और सलाह',
+            'desc'  => 'Get an e-prescription, lifestyle advice, and recommended tests if needed.',
+            'icon'  => 'M9 12h6m-6 4h4m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+        ],
+        [
+            'title' => 'Medication & Follow Through',
+            'hi'    => 'दवा और अनुवर्ती',
+            'desc'  => 'Collect medicine or get home delivery, and follow the doctor’s instructions.',
+            'icon'  => 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+        ],
+        [
+            'title' => 'Monitor & Track',
+            'hi'    => 'निगरानी और ट्रैकिंग',
+            'desc'  => 'Track your health and share vitals or reports with your doctor as advised.',
+            'icon'  => 'M3 3v18h18M18.7 8l-5.1 5.2-2.8-2.7L7 14.3',
+        ],
+        [
+            'title' => 'Follow-up Consultation',
+            'hi'    => 'फॉलो-अप परामर्श',
+            'desc'  => 'Have a scheduled follow-up; the doctor reviews progress & adjusts treatment.',
+            'icon'  => 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-4 4v-4z',
+        ],
+        [
+            'title' => 'Continuous Care',
+            'hi'    => 'निरंतर देखभाल',
+            'desc'  => 'Ongoing support for better health — reach a doctor whenever you need one.',
+            'icon'  => 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+        ],
+    ];
+@endphp
 <section class="py-16 lg:py-24 bg-white" id="how-it-works">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-10 lg:mb-12">
+        <div class="text-center mb-10 lg:mb-14">
             <span class="inline-block px-4 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Simple Process</span>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Consult a doctor online in just four simple steps.</p>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How Telemedicine Works</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Your complete telemedicine journey, from your first booking to continuous care.</p>
+            <p class="text-gray-400 max-w-2xl mx-auto mt-2">पहली बुकिंग से लेकर निरंतर देखभाल तक — आपकी संपूर्ण टेलीमेडिसिन यात्रा।</p>
         </div>
-        <img src="{{ asset('images/how-it-works.png') }}"
-             alt="How Telehealth Mart works: Register, Choose Doctor, Book Time Slot, Consult & Get Prescription"
-             class="w-full h-auto rounded-2xl shadow-md border border-gray-100">
+
+        {{-- 9-step journey grid --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" x-data="{ shown: false }" x-intersect.once="shown = true">
+            @foreach($journeySteps as $step)
+            <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-700 ease-out overflow-hidden"
+                 :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                 style="transition-delay: {{ ($loop->index) * 80 }}ms">
+                {{-- Top accent bar --}}
+                <div class="h-1.5 bg-gradient-to-r from-brand-400 via-brand-600 to-brand-700"></div>
+
+                <div class="p-6">
+                    {{-- Icon tile with numbered badge --}}
+                    <div class="relative w-14 h-14 mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 group-hover:bg-brand-100 transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="{{ $step['icon'] }}"/>
+                            </svg>
+                        </div>
+                        <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-brand-600 text-white text-xs font-bold flex items-center justify-center shadow-md shadow-brand-600/40 ring-2 ring-white">{{ $loop->iteration }}</span>
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900">{{ $step['title'] }}</h3>
+                    <p class="text-xs text-gray-400 mt-0.5">{{ $step['hi'] }}</p>
+                    <p class="text-sm text-gray-600 leading-relaxed mt-3">{{ $step['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        {{-- Continuous Health Journey ribbon --}}
+        <div class="mt-12 flex justify-center">
+            <div class="inline-flex items-center gap-2.5 px-6 py-3 bg-brand-50 border border-brand-100 rounded-full shadow-sm">
+                <svg class="w-5 h-5 text-brand-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/>
+                </svg>
+                <span class="text-sm font-semibold text-brand-700">Continuous Health Journey</span>
+                <span class="hidden sm:inline text-xs text-brand-500">· निरंतर स्वास्थ्य यात्रा</span>
+            </div>
+        </div>
+
+        {{-- Outcomes + trust bar --}}
+        <div class="mt-10 rounded-2xl border border-gray-100 bg-gradient-to-r from-brand-50/60 via-white to-brand-50/60 shadow-sm p-6 flex flex-col lg:flex-row items-center justify-between gap-6">
+            {{-- Outcome chips --}}
+            <div class="flex flex-wrap items-center justify-center gap-2.5">
+                @foreach(['Better Access' => 'बेहतर पहुँच', 'Timely Care' => 'समय पर देखभाल', 'Improved Health' => 'बेहतर स्वास्थ्य'] as $outcome => $outcomeHi)
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-brand-100 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+                    <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    {{ $outcome }}
+                </span>
+                @endforeach
+            </div>
+
+            {{-- Trust row --}}
+            <div class="flex items-center gap-4 text-gray-500">
+                <span class="hidden md:inline text-sm font-semibold text-gray-700">Secure • Private • Compliant</span>
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-label="Data encryption">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-label="Secure platform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-label="Privacy compliant">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-4">Your health information is safe and protected at every step. · आपकी स्वास्थ्य जानकारी हर चरण पर सुरक्षित रहती है।</p>
     </div>
 </section>
 
